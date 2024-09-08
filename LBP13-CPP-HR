@@ -1,0 +1,33 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int number;
+    do {
+        cin >> number;
+        
+        // Check if the input is valid
+        if (number <= 0) {
+            cout  << endl;
+        }
+    } while (number <= 0); 
+    
+    // Initialize a counter for the number of digits
+    int numDigits = 0;
+    int temp = number;
+    while (temp > 0) {
+        temp /= 10; // Remove the last digit
+        numDigits++; // Increment the digit count
+    }
+    
+    // Output the number of digits
+    cout  << numDigits << endl;
+    
+    return 0; 
+}
+
+    
